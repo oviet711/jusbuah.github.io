@@ -1,16 +1,33 @@
 <header class="site-header">
   <div class="container header-inner">
-    <a href="{{ '/' | relative_url }}" class="site-title">
-      🍹 {{ site.title }}
+    <a href="{{ '/' | relative_url }}" class="site-logo">
+      <!-- Logo SVG sederhana: gelas jus + daun -->
+      <svg width="36" height="36" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Logo Jus Buah Segar">
+        <rect x="8" y="16" width="28" height="32" rx="6" fill="#7FD1B9"/>
+        <path d="M14 20H30" stroke="#2D3E3A" stroke-width="3" stroke-linecap="round"/>
+        <path d="M14 26H30" stroke="#2D3E3A" stroke-width="3" stroke-linecap="round"/>
+        <path d="M14 32H26" stroke="#2D3E3A" stroke-width="3" stroke-linecap="round"/>
+        <path d="M40 20C40 20 46 18 50 22C54 26 52 34 48 38C44 42 38 40 38 40" stroke="#7FD1B9" stroke-width="4" stroke-linecap="round"/>
+        <path d="M44 24C44 24 48 23 51 26C54 29 53 35 50 38" stroke="#A8D8EA" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <span class="site-title-text">Jus Buah Segar</span>
     </a>
 
-    <nav class="site-nav">
+    <button class="mobile-menu-btn" aria-label="Buka menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav">
       <ul>
         <li><a href="{{ '/' | relative_url }}">Beranda</a></li>
         <li><a href="{{ '/menu' | relative_url }}">Menu</a></li>
         <li><a href="{{ '/gift' | relative_url }}">Gift</a></li>
         <li><a href="{{ '/galeri' | relative_url }}">Galeri</a></li>
         <li><a href="{{ '/pesan' | relative_url }}">Pesan</a></li>
+        <li><a href="{{ '/tentang' | relative_url }}">Tentang</a></li>
+        <li><a href="{{ '/faq' | relative_url }}">FAQ</a></li>
         <li><a href="#testimoni">Testimoni</a></li>
         <li><a href="#info-buah">Info Buah</a></li>
         <li><a href="#kontak">Kontak</a></li>
