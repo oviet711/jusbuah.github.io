@@ -145,3 +145,11 @@ title: Beranda
     </div>
   </div>
 </section>
+<section class="section" style="margin-top: 25px;">
+  <h2>📚 Info Lainnya</h2>
+  <p>
+    Ingin tahu lebih banyak tentang kami? Baca halaman
+    <a href="/tentang">Tentang Kami</a> atau lihat
+    <a href="/faq">Pertanyaan yang Sering Diajukan (FAQ)</a>.
+  </p>
+</section>
