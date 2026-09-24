@@ -275,4 +275,86 @@ body {
   .hero h1 {
     font-size: 1.8rem;
   }
+
+  /* GALERI */
+.galeri-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.galeri-card {
+  background: var(--bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  transition: transform 0.2s;
+}
+
+.galeri-card:hover {
+  transform: translateY(-4px);
+}
+
+.galeri-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.galeri-card h3 {
+  padding: 12px 12px 6px;
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.galeri-card p {
+  padding: 0 12px 15px;
+  font-size: 0.95rem;
+}
+
+/* FORM PESAN */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cfd8d5;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.btn-wa {
+  background: #25D366;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn-wa:hover {
+  background: #1ebc57;
+  transform: translateY(-2px);
+}
 }
