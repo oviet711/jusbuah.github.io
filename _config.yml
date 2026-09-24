@@ -1,16 +1,16 @@
 title: Jus Buah Segar
-description: Toko jus buah segar dengan informasi buah, menu, promo, dan gift.
+description: Toko jus buah segar 100% alami, tanpa pemanis buatan. Pesan online, kirim gift, dan nikmati segarnya buah pilihan.
 baseurl: ""
 url: "https://jusbuah.github.io"
 
 theme: minima
 
 colors:
-  primary: "#7FD1B9"      # hijau mint lembut
-  secondary: "#FFD97D"    # kuning cerah lembut
-  accent: "#A8D8EA"       # biru langit pastel
-  background: "#F9FBF9"   # putih kehijauan sangat muda
-  text: "#2D3E3A"         # hijau tua lembut untuk teks
+  primary: "#7FD1B9"
+  secondary: "#FFD97D"
+  accent: "#A8D8EA"
+  background: "#F9FBF9"
+  text: "#2D3E3A"
 
 defaults:
   - scope:
