@@ -116,8 +116,32 @@ title: Beranda
       <ul style="list-style: none; padding-left: 0;">
         <li>🛵 <a href="https://gofood.co.id" target="_blank" rel="noopener">GoFood</a></li>
         <li>🍜 <a href="https://shopeefood.co.id" target="_blank" rel="noopener">ShopeeFood</a></li>
-        <li>🚗 <a href="#">GrabFood</a></li>
+        <li>🚗 <a href="https://grab.com" target="_blank" rel="noopener">GrabFood</a></li>
       </ul>
+      <p style="margin-top: 12px;">
+        Atau gunakan form WhatsApp kami:
+        <br />
+        <a href="/pesan" class="btn" style="margin-top: 8px; display: inline-block;">Form Pesan WhatsApp</a>
+      </p>
+    </div>
+
+    <div>
+      <h3 style="color: var(--primary); margin-bottom: 10px;">📸 Galeri Produk</h3>
+      <p style="margin-bottom: 12px;">
+        Lihat foto-foto jus buah favorit pelanggan kami.
+      </p>
+      <a href="/galeri" class="btn">Buka Galeri</a>
+    </div>
+
+    <div>
+      <h3 style="color: var(--primary); margin-bottom: 10px;">📍 Lokasi Outlet</h3>
+      <p style="margin-bottom: 12px;">
+        Kunjungi outlet kami atau lihat lokasi di peta.
+      </p>
+      <a href="https://www.google.com/maps/search/?api=1&query=Jl.+Buah+Segar+No.+12+Jakarta+Selatan" 
+         target="_blank" rel="noopener" class="btn">
+        Lihat di Google Maps
+      </a>
     </div>
   </div>
 </section>
