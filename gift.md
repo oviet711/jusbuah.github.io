@@ -36,6 +36,6 @@ title: Gift
   </ul>
 
   <div style="margin-top: 20px;">
-    <a href="/" class="btn">Kirim Gift Sekarang</a>
+    <a href="{{ '/' | relative_url }}" class="btn">Kirim Gift Sekarang</a>
   </div>
 </section>
