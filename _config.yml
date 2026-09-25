@@ -1,7 +1,7 @@
 title: Jus Buah Segar
-description: Toko jus buah segar 100% alami, tanpa pemanis buatan. Pesan online, kirim gift, dan nikmati segarnya buah pilihan.
-baseurl: ""
-url: "https://jusbuah.github.io"
+description: Toko jus buah segar 100% alami, tanpa pemanis buatan.
+baseurl: "/jusbuah.github.io"
+url: "https://oviet711.github.io"
 
 theme: minima
 
