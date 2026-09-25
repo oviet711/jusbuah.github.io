@@ -221,8 +221,7 @@ function setLoading(loading) {
 }
 
 async function askAI(question) {
-  // GANTI dengan URL Worker kamu
-  const WORKER_URL = "https://jusbuah-chatbot.oviet711.workers.dev/";
+  const WORKER_URL = "https://jusbuah-chatbot.oviet711.workers.dev/chat";
 
   const res = await fetch(WORKER_URL, {
     method: "POST",
@@ -233,11 +232,13 @@ async function askAI(question) {
   });
 
   if (!res.ok) {
+    console.error("Worker error:", res.status, res.statusText);
     throw new Error("Gagal menghubungi AI");
   }
 
   const data = await res.json();
   if (data.error) {
+    console.error("API error:", data.error);
     throw new Error(data.error);
   }
 
