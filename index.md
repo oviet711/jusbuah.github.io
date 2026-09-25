@@ -11,7 +11,7 @@ title: Beranda
     Jus buah 100% alami, tanpa pemanis buatan, dibuat fresh setiap hari.
     Cocok untuk teman kerja, olahraga, atau sekadar santai di rumah.
   </p>
-  <a href="#menu" class="btn">Lihat Menu</a>
+  <a href="{{ '/menu' | relative_url }}" class="btn">Lihat Menu</a>
 </div>
 
 <!-- FRAME 1: MENU & PROMO -->
@@ -105,7 +105,7 @@ title: Beranda
         Bingung cari kado? Kirimkan jus buah segar untuk orang tersayang.
         Mereka akan mendapat notifikasi dan bisa menebus di outlet terdekat.
       </p>
-      <a href="/gift" class="btn">Lihat Daftar Penerima Gift</a>
+      <a href="{{ '/gift' | relative_url }}" class="btn">Lihat Daftar Penerima Gift</a>
     </div>
 
     <div>
@@ -121,7 +121,7 @@ title: Beranda
       <p style="margin-top: 12px;">
         Atau gunakan form WhatsApp kami:
         <br />
-        <a href="/pesan" class="btn" style="margin-top: 8px; display: inline-block;">Form Pesan WhatsApp</a>
+        <a href="{{ '/pesan' | relative_url }}" class="btn" style="margin-top: 8px; display: inline-block;">Form Pesan WhatsApp</a>
       </p>
     </div>
 
@@ -130,7 +130,7 @@ title: Beranda
       <p style="margin-bottom: 12px;">
         Lihat foto-foto jus buah favorit pelanggan kami.
       </p>
-      <a href="/galeri" class="btn">Buka Galeri</a>
+      <a href="{{ '/galeri' | relative_url }}" class="btn">Buka Galeri</a>
     </div>
 
     <div>
@@ -149,7 +149,7 @@ title: Beranda
   <h2>📚 Info Lainnya</h2>
   <p>
     Ingin tahu lebih banyak tentang kami? Baca halaman
-    <a href="/tentang">Tentang Kami</a> atau lihat
-    <a href="/faq">Pertanyaan yang Sering Diajukan (FAQ)</a>.
+    <a href="{{ '/tentang' | relative_url }}">Tentang Kami</a> atau lihat
+    <a href="{{ '/faq' | relative_url }}">Pertanyaan yang Sering Diajukan (FAQ)</a>.
   </p>
 </section>
