@@ -221,63 +221,15 @@ function setLoading(loading) {
 }
 
 async function askAI(question) {
-  // Konteks khusus Jus Buah
-  const systemPrompt = `Kamu adalah asisten virtual toko "Jus Buah Segar".
-Tugas kamu:
-- Menjawab pertanyaan tentang menu jus, harga, promo, gift, alamat, kontak, dan informasi buah.
-- Gaya bahasa ramah, singkat, dan jelas.
-- Jika pertanyaan di luar topik (misal politik, gosip, dll), jawab singkat: 
-  "Maaf, saya hanya bisa menjawab seputar Jus Buah Segar (menu, harga, promo, alamat, info buah, dll.)."
-- Jangan pernah membuat harga atau promo yang tidak ada. Gunakan informasi berikut:
+  // GANTI dengan URL Worker kamu
+  const WORKER_URL = "https://jusbuah-chatbot.oviet711.workers.dev/chat";
 
-Menu & harga:
-- Jus Jeruk: Rp 15.000
-- Jus Mangga: Rp 18.000
-- Jus Alpukat: Rp 20.000
-- Mixed Berry: Rp 22.000
-- Jus Semangka: Rp 15.000
-- Jus Nanas: Rp 16.000
-Ukuran jumbo (500 ml) +Rp 5.000.
-
-Promo: Beli 3 jus, gratis 1 jus jeruk (berlaku sampai akhir minggu).
-
-Alamat: Jl. Buah Segar No. 12, Jakarta Selatan.
-Kontak: WhatsApp 0812-3456-7890.
-
-Pesan online: GoFood, ShopeeFood, GrabFood, atau via WhatsApp.
-
-Gift: Bisa kirim jus sebagai gift, penerima bisa tebus di outlet.
-
-Informasi buah:
-- Jeruk: kaya vitamin C, baik untuk daya tahan tubuh.
-- Mangga: vitamin A dan serat, baik untuk mata dan pencernaan.
-- Alpukat: lemak sehat, energi tahan lama.
-- Berry: antioksidan tinggi.
-
-Jawab dalam bahasa Indonesia.`;
-
-  const prompt = `${systemPrompt}
-
-Pertanyaan pengguna: ${question}
-
-Jawaban:`;
-
-  const res = await fetch(HF_API_URL, {
+  const res = await fetch(WORKER_URL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
-      // Jika punya token, tambahkan:
-      // "Authorization": "Bearer HF_TOKEN_KAMU"
-      "Authorization": "Bearer HF_TOKEN"
     },
-    body: JSON.stringify({
-      inputs: prompt,
-      parameters: {
-        max_new_tokens: 150,
-        temperature: 0.7,
-        top_p: 0.95
-      }
-    })
+    body: JSON.stringify({ message: question })
   });
 
   if (!res.ok) {
@@ -285,30 +237,11 @@ Jawaban:`;
   }
 
   const data = await res.json();
-  // Hugging Face Inference API untuk text-generation mengembalikan array
-  // dengan field generated_text
-  let answer = "";
-  if (Array.isArray(data) && data[0] && data[0].generated_text) {
-    const full = data[0].generated_text;
-    // Ambil bagian setelah "Jawaban:"
-    const idx = full.lastIndexOf("Jawaban:");
-    if (idx >= 0) {
-      answer = full.slice(idx + 10).trim();
-    } else {
-      answer = full.trim();
-    }
-  } else if (data.generated_text) {
-    answer = data.generated_text.trim();
-  } else {
-    answer = "Maaf, saya tidak bisa memproses pertanyaan ini.";
+  if (data.error) {
+    throw new Error(data.error);
   }
 
-  // Bersihkan dari kemungkinan instruksi sistem bocor
-  answer = answer.replace(/Kamu adalah asisten virtual.*?Jawaban:/s, "").trim();
-  if (!answer) {
-    answer = "Maaf, saya tidak yakin dengan jawabannya. Silakan hubungi WhatsApp kami.";
-  }
-
-  return answer;
+  return data.reply || "Maaf, saya tidak yakin dengan jawabannya.";
 }
+  
 </script>
