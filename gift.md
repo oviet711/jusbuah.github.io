@@ -35,6 +35,56 @@ description: Kirimkan jus buah sebagai gift untuk orang tersayang.
   </p>
 </section>
 
+
+{% if site.features.gift_recipients %}
+<section class="section">
+  <div class="section-heading">
+    <p class="eyebrow">Penerima gift</p>
+    <h2>Daftar Penerima Gift</h2>
+    <p>
+      Daftar berikut hanya menampilkan penerima yang memberikan izin.
+      Nama dapat disamarkan demi privasi.
+    </p>
+  </div>
+
+  <ul class="gift-list">
+    <li>
+      <span>
+        <strong>Andi P.</strong> menerima 3 Jus Alpukat dari Rina S.
+      </span>
+      <span class="gift-date">20 Sep 2026</span>
+    </li>
+
+    <li>
+      <span>
+        <strong>Bella T.</strong> menerima 5 Mixed Berry dari Tim Marketing.
+      </span>
+      <span class="gift-date">18 Sep 2026</span>
+    </li>
+
+    <li>
+      <span>
+        <strong>Cahyo D.</strong> menerima 2 Jus Mangga dari Ibu Hartini.
+      </span>
+      <span class="gift-date">15 Sep 2026</span>
+    </li>
+
+    <li>
+      <span>
+        <strong>Dinda K.</strong> menerima 4 Jus Jeruk dari Komunitas Lari.
+      </span>
+      <span class="gift-date">10 Sep 2026</span>
+    </li>
+  </ul>
+
+  <p class="privacy-note">
+    Jangan tampilkan nomor WhatsApp, alamat, kode gift, atau informasi pribadi
+    penerima tanpa izin yang jelas.
+  </p>
+</section>
+{% endif %}
+
+
 <section class="section">
   <div class="section-heading">
     <p class="eyebrow">Untuk berbagai momen</p>
