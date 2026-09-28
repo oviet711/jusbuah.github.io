@@ -1,22 +1,42 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const menuBtn = document.querySelector('.mobile-menu-btn');
-  const siteNav = document.getElementById('site-nav');
+document.addEventListener("DOMContentLoaded", function () {
+  const menuButton = document.getElementById("mobile-menu-button");
+  const navigation = document.getElementById("site-navigation");
 
-  if (!menuBtn || !siteNav) return;
+  if (!menuButton || !navigation) {
+    return;
+  }
 
-  menuBtn.addEventListener('click', function () {
-    const isOpen = siteNav.classList.contains('open');
-    siteNav.classList.toggle('open');
-    menuBtn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+  function closeMenu() {
+    navigation.classList.remove("is-open");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Buka menu navigasi");
+  }
+
+  function openMenu() {
+    navigation.classList.add("is-open");
+    menuButton.setAttribute("aria-expanded", "true");
+    menuButton.setAttribute("aria-label", "Tutup menu navigasi");
+  }
+
+  menuButton.addEventListener("click", function () {
+    const isOpen = navigation.classList.contains("is-open");
+
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
   });
 
-  // Tutup menu saat klik link (mobile)
-  siteNav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (siteNav.classList.contains('open')) {
-        siteNav.classList.remove('open');
-        menuBtn.setAttribute('aria-expanded', 'false');
-      }
+  navigation.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+      closeMenu();
     });
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeMenu();
+    }
   });
 });
