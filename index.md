@@ -29,8 +29,8 @@ description: Jus buah segar, menu pilihan, promo, gift, dan pemesanan online.
     <p class="eyebrow">Pilihan favorit</p>
     <h2>🥤 Menu Pilihan</h2>
     <p>
-      Berikut beberapa jus favorit pelanggan. Lihat halaman menu untuk
-      pilihan lengkap dan paket yang tersedia.
+      Berikut beberapa jus favorit. Lihat halaman menu untuk pilihan lengkap
+      dan informasi pemesanan.
     </p>
   </div>
 
@@ -75,36 +75,6 @@ description: Jus buah segar, menu pilihan, promo, gift, dan pemesanan online.
   </div>
 </section>
 
-<section class="section" id="testimoni">
-  <div class="section-heading">
-    <p class="eyebrow">Cerita pelanggan</p>
-    <h2>💬 Apa Kata Mereka?</h2>
-  </div>
-
-  <div class="testimoni-grid">
-    <article class="testimoni-card">
-      <blockquote>
-        “Jus alpukatnya kental dan rasanya pas. Cocok jadi teman kerja.”
-      </blockquote>
-      <cite>— Rina, pelanggan</cite>
-    </article>
-
-    <article class="testimoni-card">
-      <blockquote>
-        “Saya suka jus mangga dan jeruknya. Rasanya segar untuk setelah olahraga.”
-      </blockquote>
-      <cite>— Dimas, pelanggan</cite>
-    </article>
-
-    <article class="testimoni-card">
-      <blockquote>
-        “Praktis dipesan lewat WhatsApp dan cocok untuk dinikmati bersama keluarga.”
-      </blockquote>
-      <cite>— Ibu Siti, pelanggan</cite>
-    </article>
-  </div>
-</section>
-
 <section class="section" id="info-buah">
   <div class="section-heading">
     <p class="eyebrow">Kenali buahnya</p>
@@ -118,30 +88,22 @@ description: Jus buah segar, menu pilihan, promo, gift, dan pemesanan online.
   <div class="buah-grid">
     <article class="buah-card">
       <h3>Jeruk</h3>
-      <p>
-        Jeruk dikenal sebagai salah satu sumber vitamin C.
-      </p>
+      <p>Jeruk dikenal sebagai salah satu sumber vitamin C.</p>
     </article>
 
     <article class="buah-card">
       <h3>Mangga</h3>
-      <p>
-        Mangga mengandung vitamin A dan serat.
-      </p>
+      <p>Mangga mengandung vitamin A dan serat.</p>
     </article>
 
     <article class="buah-card">
       <h3>Alpukat</h3>
-      <p>
-        Alpukat mengandung lemak tak jenuh dan serat.
-      </p>
+      <p>Alpukat mengandung lemak tak jenuh dan serat.</p>
     </article>
 
     <article class="buah-card">
       <h3>Berry</h3>
-      <p>
-        Buah berry dikenal mengandung antioksidan.
-      </p>
+      <p>Buah berry dikenal mengandung antioksidan.</p>
     </article>
   </div>
 </section>
@@ -159,8 +121,8 @@ description: Jus buah segar, menu pilihan, promo, gift, dan pemesanan online.
     <article class="info-card">
       <h3>🎁 Kirim Jus sebagai Gift</h3>
       <p>
-        Kirimkan gift jus untuk orang tersayang. Hubungi kami untuk
-        pengaturan penerima dan detail penebusan gift.
+        Kirimkan gift jus untuk orang tersayang. Hubungi kami untuk pengaturan
+        penerima dan detail penebusan gift.
       </p>
       <a class="btn" href="{{ '/gift' | relative_url }}">
         Lihat Gift
@@ -180,7 +142,7 @@ description: Jus buah segar, menu pilihan, promo, gift, dan pemesanan online.
     <article class="info-card">
       <h3>📸 Galeri Produk</h3>
       <p>
-        Lihat beberapa produk jus buah yang tersedia di galeri kami.
+        Lihat beberapa pilihan jus buah yang tersedia di galeri kami.
       </p>
       <a class="btn" href="{{ '/galeri' | relative_url }}">
         Buka Galeri
@@ -190,7 +152,7 @@ description: Jus buah segar, menu pilihan, promo, gift, dan pemesanan online.
     <article class="info-card">
       <h3>📍 Lokasi Outlet</h3>
       <p>
-        Kunjungi outlet atau lihat lokasi melalui Google Maps sebelum datang.
+        Kunjungi outlet atau buka lokasi melalui Google Maps sebelum datang.
       </p>
       <a
         class="btn"
@@ -209,7 +171,7 @@ description: Jus buah segar, menu pilihan, promo, gift, dan pemesanan online.
     <p class="eyebrow">Kenali kami</p>
     <h2>📚 Informasi Lainnya</h2>
     <p>
-      Pelajari cerita kami atau lihat jawaban dari pertanyaan yang sering ditanyakan.
+      Pelajari cerita kami atau lihat jawaban atas pertanyaan yang sering ditanyakan.
     </p>
   </div>
 
