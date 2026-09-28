@@ -1,83 +1,135 @@
 ---
-layout: default
-title: Pesan
+title: Pesan Jus
+description: Pesan Jus Buah Segar melalui WhatsApp.
 ---
 
-## 🛒 Pesan Jus Buah via WhatsApp
+<header class="page-header">
+  <p class="eyebrow">Pesan dengan mudah</p>
+  <h1>🛒 Pesan Jus via WhatsApp</h1>
+  <p class="page-intro">
+    Isi data pesanan berikut. Setelah menekan tombol, WhatsApp akan terbuka
+    dengan detail pesanan yang sudah disiapkan.
+  </p>
+</header>
 
-<p>
-  Isi formulir di bawah ini, lalu klik tombol “Kirim ke WhatsApp”.
-  Kamu akan diarahkan ke chat WhatsApp dengan pesan yang sudah terformat.
-</p>
-
-<section class="section" style="margin-top: 25px;">
-  <form id="form-pesan" onsubmit="kirimKeWhatsApp(event)">
+<section class="section">
+  <form id="form-pesan" class="order-form">
     <div class="form-group">
-      <label for="nama">Nama Lengkap</label>
-      <input type="text" id="nama" name="nama" required placeholder="Contoh: Budi Santoso" />
+      <label for="nama">Nama lengkap</label>
+      <input
+        id="nama"
+        name="nama"
+        type="text"
+        placeholder="Contoh: Budi Santoso"
+        required
+      >
     </div>
 
     <div class="form-group">
-      <label for="alamat">Alamat Lengkap</label>
-      <textarea id="alamat" name="alamat" rows="3" required placeholder="Jl. ..., No. ..., Kelurahan, Kecamatan, Kota"></textarea>
+      <label for="alamat">Alamat lengkap</label>
+      <textarea
+        id="alamat"
+        name="alamat"
+        placeholder="Jl. ..., nomor, kelurahan, kecamatan, kota"
+        required
+      ></textarea>
     </div>
 
     <div class="form-group">
-      <label for="menu">Pilihan Menu</label>
+      <label for="menu">Pilihan menu</label>
       <select id="menu" name="menu" required>
-        <option value="" disabled selected>Pilih jus</option>
-        <option value="Jus Jeruk">Jus Jeruk</option>
-        <option value="Jus Mangga">Jus Mangga</option>
-        <option value="Jus Alpukat">Jus Alpukat</option>
-        <option value="Mixed Berry">Mixed Berry</option>
-        <option value="Jus Semangka">Jus Semangka</option>
-        <option value="Jus Nanas">Jus Nanas</option>
+        <option value="" selected disabled>Pilih menu jus</option>
+        <option value="Jus Jeruk">Jus Jeruk — Rp15.000</option>
+        <option value="Jus Mangga">Jus Mangga — Rp18.000</option>
+        <option value="Jus Alpukat">Jus Alpukat — Rp20.000</option>
+        <option value="Mixed Berry">Mixed Berry — Rp22.000</option>
+        <option value="Jus Semangka">Jus Semangka — Rp15.000</option>
+        <option value="Jus Nanas">Jus Nanas — Rp16.000</option>
       </select>
     </div>
 
     <div class="form-group">
-      <label for="jumlah">Jumlah (gelas)</label>
-      <input type="number" id="jumlah" name="jumlah" min="1" value="1" required />
+      <label for="ukuran">Ukuran</label>
+      <select id="ukuran" name="ukuran" required>
+        <option value="Regular 350 ml">Regular 350 ml</option>
+        <option value="Jumbo 500 ml (+Rp5.000)">Jumbo 500 ml (+Rp5.000)</option>
+      </select>
     </div>
 
     <div class="form-group">
-      <label for="catatan">Catatan Tambahan (opsional)</label>
-      <textarea id="catatan" name="catatan" rows="2" placeholder="Contoh: kurang manis, tanpa es, dll."></textarea>
+      <label for="jumlah">Jumlah gelas</label>
+      <input
+        id="jumlah"
+        name="jumlah"
+        type="number"
+        min="1"
+        max="100"
+        value="1"
+        required
+      >
     </div>
 
-    <button type="submit" class="btn btn-wa">Kirim ke WhatsApp</button>
-  </form>
+    <div class="form-group">
+      <label for="catatan">Catatan tambahan</label>
+      <textarea
+        id="catatan"
+        name="catatan"
+        placeholder="Contoh: tanpa es, es sedikit, atau detail lainnya"
+      ></textarea>
+    </div>
 
-  <p style="margin-top: 15px; font-size: 0.9rem;">
-    Nomor WhatsApp tujuan: <strong>0812-3456-7890</strong>
-  </p>
+    <button class="btn btn-primary" type="submit">
+      Lanjut ke WhatsApp
+    </button>
+
+    <p class="form-help">
+      Nomor tujuan: 0812-3456-7890. Detail harga, ongkir, ketersediaan menu,
+      dan promo akan dikonfirmasi oleh toko.
+    </p>
+  </form>
 </section>
 
 <script>
-  function kirimKeWhatsApp(event) {
-    event.preventDefault();
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("form-pesan");
 
-    const nama = document.getElementById('nama').value.trim();
-    const alamat = document.getElementById('alamat').value.trim();
-    const menu = document.getElementById('menu').value;
-    const jumlah = document.getElementById('jumlah').value;
-    const catatan = document.getElementById('catatan').value.trim();
-
-    const nomorWA = '6281234567890'; // ganti dengan nomor WA toko (format 62...)
-
-    let pesan = `Halo, saya ingin pesan jus buah:%0A%0A`;
-    pesan += `*Nama:* ${nama}%0A`;
-    pesan += `*Alamat:* ${alamat}%0A`;
-    pesan += `*Menu:* ${menu}%0A`;
-    pesan += `*Jumlah:* ${jumlah} gelas%0A`;
-
-    if (catatan) {
-      pesan += `*Catatan:* ${catatan}%0A`;
+    if (!form) {
+      return;
     }
 
-    pesan += `%0ATerima kasih!`;
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-    const url = `https://wa.me/${nomorWA}?text=${pesan}`;
-    window.open(url, '_blank');
-  }
+      const nama = document.getElementById("nama").value.trim();
+      const alamat = document.getElementById("alamat").value.trim();
+      const menu = document.getElementById("menu").value;
+      const ukuran = document.getElementById("ukuran").value;
+      const jumlah = document.getElementById("jumlah").value;
+      const catatan = document.getElementById("catatan").value.trim();
+
+      const nomorWhatsApp = "6281234567890";
+
+      const lines = [
+        "Halo Jus Buah Segar, saya ingin pesan:",
+        "",
+        `Nama: ${nama}`,
+        `Alamat: ${alamat}`,
+        `Menu: ${menu}`,
+        `Ukuran: ${ukuran}`,
+        `Jumlah: ${jumlah} gelas`
+      ];
+
+      if (catatan) {
+        lines.push(`Catatan: ${catatan}`);
+      }
+
+      lines.push("");
+      lines.push("Mohon konfirmasi ketersediaan, total harga, dan ongkir. Terima kasih.");
+
+      const pesan = encodeURIComponent(lines.join("\n"));
+      const url = `https://wa.me/${nomorWhatsApp}?text=${pesan}`;
+
+      window.open(url, "_blank", "noopener");
+    });
+  });
 </script>
