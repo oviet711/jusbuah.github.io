@@ -99,57 +99,50 @@ title: Beranda
   <h2>🎁 Gift & Pesan Online</h2>
 
   <div class="info-grid">
-  .info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
-    gap: 22px;
-  }
-  
-  .info-grid > div {
-    min-width: 0;
-  }
-    <div>
-      <h3 style="color: var(--primary); margin-bottom: 10px;">Kirim Jus sebagai Gift</h3>
-      <p style="margin-bottom: 12px;">
-        Bingung cari kado? Kirimkan jus buah segar untuk orang tersayang.
-        Mereka akan mendapat notifikasi dan bisa menebus di outlet terdekat.
+    <div class="info-card">
+      <h3>🎁 Kirim Jus sebagai Gift</h3>
+      <p>
+        Bingung mencari kado? Kirimkan jus buah segar untuk orang tersayang.
+        Penerima dapat menebus gift sesuai ketentuan toko.
       </p>
-      <a href="{{ '/gift' | relative_url }}" class="btn">Lihat Daftar Penerima Gift</a>
+      <a href="{{ '/gift' | relative_url }}" class="btn">
+        Lihat Gift
+      </a>
     </div>
 
-    <div>
-      <h3 style="color: var(--primary); margin-bottom: 10px;">Pesan via Online</h3>
-      <p style="margin-bottom: 12px;">
-        Mau praktis? Pesan lewat aplikasi favoritmu:
+    <div class="info-card">
+      <h3>🛒 Pesan Online</h3>
+      <p>
+        Pesan melalui GoFood, ShopeeFood, GrabFood, atau gunakan form WhatsApp
+        agar detail pesanan dapat dikonfirmasi langsung.
       </p>
-      <ul style="list-style: none; padding-left: 0;">
-        <li>🛵 <a href="https://gofood.co.id" target="_blank" rel="noopener">GoFood</a></li>
-        <li>🍜 <a href="https://shopeefood.co.id" target="_blank" rel="noopener">ShopeeFood</a></li>
-        <li>🚗 <a href="https://grab.com" target="_blank" rel="noopener">GrabFood</a></li>
-      </ul>
-      <p style="margin-top: 12px;">
-        Atau gunakan form WhatsApp kami:
-        <br />
-        <a href="{{ '/pesan' | relative_url }}" class="btn" style="margin-top: 8px; display: inline-block;">Form Pesan WhatsApp</a>
-      </p>
+      <a href="{{ '/pesan' | relative_url }}" class="btn">
+        Pesan via WhatsApp
+      </a>
     </div>
 
-    <div>
-      <h3 style="color: var(--primary); margin-bottom: 10px;">📸 Galeri Produk</h3>
-      <p style="margin-bottom: 12px;">
-        Lihat foto-foto jus buah favorit pelanggan kami.
+    <div class="info-card">
+      <h3>📸 Galeri Produk</h3>
+      <p>
+        Lihat beberapa produk jus buah favorit pelanggan kami dalam galeri.
       </p>
-      <a href="{{ '/galeri' | relative_url }}" class="btn">Buka Galeri</a>
+      <a href="{{ '/galeri' | relative_url }}" class="btn">
+        Buka Galeri
+      </a>
     </div>
 
-    <div>
-      <h3 style="color: var(--primary); margin-bottom: 10px;">📍 Lokasi Outlet</h3>
-      <p style="margin-bottom: 12px;">
-        Kunjungi outlet kami atau lihat lokasi di peta.
+    <div class="info-card">
+      <h3>📍 Lokasi Outlet</h3>
+      <p>
+        Kunjungi outlet kami atau buka lokasi melalui Google Maps sebelum datang.
       </p>
-      <a href="https://www.google.com/maps/search/?api=1&query=Jl.+Buah+Segar+No.+12+Jakarta+Selatan" 
-         target="_blank" rel="noopener" class="btn">
-        Lihat di Google Maps
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=Jl.+Buah+Segar+No.+12+Jakarta+Selatan"
+        class="btn"
+        target="_blank"
+        rel="noopener"
+      >
+        Lihat Peta
       </a>
     </div>
   </div>
