@@ -1,62 +1,77 @@
 ---
-layout: default
 title: FAQ
+description: Pertanyaan yang sering ditanyakan pelanggan Jus Buah Segar.
 ---
 
-## ❓ Pertanyaan yang Sering Diajukan (FAQ)
+<header class="page-header">
+  <p class="eyebrow">Bantuan pelanggan</p>
+  <h1>❓ Pertanyaan yang Sering Ditanyakan</h1>
+  <p class="page-intro">
+    Temukan jawaban singkat tentang menu, pemesanan, gift, dan layanan kami.
+  </p>
+</header>
 
-<p>
-  Berikut adalah beberapa pertanyaan yang sering ditanyakan pelanggan tentang Jus Buah Segar.
-</p>
-
-<section class="section" style="margin-top: 25px;">
+<section class="section">
   <div class="faq-list">
-    <div class="faq-item">
-      <h3>Apakah jus menggunakan gula atau pemanis buatan?</h3>
-      <p>
-        Tidak. Semua jus kami 100% dari buah asli, tanpa tambahan gula, sirup, atau pemanis buatan.
-        Rasa manis berasal sepenuhnya dari buah.
-      </p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Berapa lama jus bisa disimpan?</h3>
-      <p>
-        Karena tanpa pengawet, kami menyarankan jus diminum segera setelah dibuat.
-        Jika ingin disimpan, masukkan ke kulkas dan habiskan dalam 4–6 jam.
-      </p>
-    </div>
-
-    <div class="faq-item">
+    <article class="faq-item">
       <h3>Apakah tersedia ukuran jumbo?</h3>
       <p>
-        Ya. Selain ukuran regular (350 ml), kami juga menyediakan ukuran jumbo (500 ml)
-        dengan tambahan Rp 5.000.
+        Ya. Ukuran regular adalah 350 ml. Ukuran jumbo 500 ml tersedia
+        dengan tambahan Rp5.000.
       </p>
-    </div>
+    </article>
 
-    <div class="faq-item">
-      <h3>Bisa pesan untuk acara (kantor, ulang tahun, dll)?</h3>
+    <article class="faq-item">
+      <h3>Bagaimana cara memesan?</h3>
       <p>
-        Bisa. Kami menerima pesanan untuk acara kantor, ulang tahun, pertemuan, dan lainnya.
-        Silakan hubungi WhatsApp kami untuk diskusi menu dan jumlah.
+        Anda dapat menggunakan halaman Pesan untuk mengirim detail pesanan
+        melalui WhatsApp, atau memesan melalui aplikasi pengantaran yang tersedia.
       </p>
-    </div>
+    </article>
 
-    <div class="faq-item">
-      <h3>Apakah ada opsi kurang manis atau tanpa es?</h3>
+    <article class="faq-item">
+      <h3>Apakah bisa pesan untuk acara?</h3>
       <p>
-        Ya. Kamu bisa menambahkan catatan saat memesan via WhatsApp, misalnya:
-        “kurang manis”, “tanpa es”, atau “es sedikit”.
+        Bisa. Hubungi WhatsApp toko untuk mengonfirmasi jumlah pesanan,
+        menu, jadwal, harga, dan pengantaran.
       </p>
-    </div>
+    </article>
 
-    <div class="faq-item">
-      <h3>Bagaimana cara mengirim jus sebagai gift?</h3>
+    <article class="faq-item">
+      <h3>Apakah tersedia gift jus?</h3>
       <p>
-        Pilih menu Gift di website, lalu ikuti petunjuk pengiriman.
-        Penerima akan mendapat kode gift dan bisa menebus jus di outlet terdekat.
+        Ya. Anda dapat mengirim jus sebagai gift. Hubungi toko untuk mengatur
+        penerima dan detail penebusan.
       </p>
-    </div>
+    </article>
+
+    <article class="faq-item">
+      <h3>Bagaimana jika ingin tanpa es atau es sedikit?</h3>
+      <p>
+        Tambahkan catatan pesanan pada form WhatsApp. Ketersediaan permintaan
+        khusus akan dikonfirmasi oleh toko.
+      </p>
+    </article>
+
+    <article class="faq-item">
+      <h3>Bagaimana mengetahui promo terbaru?</h3>
+      <p>
+        Promo ditampilkan di beranda jika tersedia. Untuk memastikan promo
+        masih berlaku, konfirmasi melalui WhatsApp sebelum pembayaran.
+      </p>
+    </article>
   </div>
+</section>
+
+<section class="section">
+  <h2>Masih Ada Pertanyaan?</h2>
+  <p class="readable-text">
+    Gunakan chatbot di pojok kanan bawah atau hubungi kami melalui WhatsApp.
+  </p>
+
+  <p style="margin-top: 22px;">
+    <a class="btn btn-primary" href="{{ '/pesan' | relative_url }}">
+      Hubungi Toko
+    </a>
+  </p>
 </section>
