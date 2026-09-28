@@ -6,6 +6,10 @@ baseurl: "/jusbuah.github.io"
 lang: id
 timezone: Asia/Jakarta
 
+features:
+  testimonials: false
+  gift_recipients: false
+
 defaults:
   - scope:
       path: ""
