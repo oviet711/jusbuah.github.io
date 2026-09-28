@@ -75,6 +75,43 @@ description: Jus buah segar, menu pilihan, promo, gift, dan pemesanan online.
   </div>
 </section>
 
+
+{% if site.features.testimonials %}
+<section class="section" id="testimoni">
+  <div class="section-heading">
+    <p class="eyebrow">Cerita pelanggan</p>
+    <h2>💬 Apa Kata Mereka?</h2>
+    <p>
+      Beberapa pengalaman pelanggan yang telah memberikan izin untuk ditampilkan.
+    </p>
+  </div>
+
+  <div class="testimoni-grid">
+    <article class="testimoni-card">
+      <blockquote>
+        “Jus alpukatnya kental dan rasanya pas. Cocok jadi teman kerja.”
+      </blockquote>
+      <cite>— Rina, pelanggan</cite>
+    </article>
+
+    <article class="testimoni-card">
+      <blockquote>
+        “Saya suka jus mangga dan jeruknya. Rasanya segar untuk setelah olahraga.”
+      </blockquote>
+      <cite>— Dimas, pelanggan</cite>
+    </article>
+
+    <article class="testimoni-card">
+      <blockquote>
+        “Praktis dipesan lewat WhatsApp dan cocok untuk dinikmati bersama keluarga.”
+      </blockquote>
+      <cite>— Ibu Siti, pelanggan</cite>
+    </article>
+  </div>
+</section>
+{% endif %}
+
+
 <section class="section" id="info-buah">
   <div class="section-heading">
     <p class="eyebrow">Kenali buahnya</p>
