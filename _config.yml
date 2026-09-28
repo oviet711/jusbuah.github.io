@@ -1,20 +1,20 @@
 title: Jus Buah Segar
-description: Toko jus buah segar 100% alami, tanpa pemanis buatan.
-baseurl: "/jusbuah.github.io"
+description: Jus buah segar pilihan untuk menemani hari Anda.
 url: "https://oviet711.github.io"
+baseurl: "/jusbuah.github.io"
 
-theme: minima
-
-colors:
-  primary: "#7FD1B9"
-  secondary: "#FFD97D"
-  accent: "#A8D8EA"
-  background: "#F9FBF9"
-  text: "#2D3E3A"
+lang: id
+timezone: Asia/Jakarta
 
 defaults:
   - scope:
       path: ""
       type: "pages"
     values:
-      layout: "default"
+      layout: default
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
