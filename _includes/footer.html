@@ -1,54 +1,86 @@
-<footer class="site-footer" id="kontak">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <h3>📍 Alamat</h3>
-        <p>
-          Jl. Buah Segar No. 12<br />
-          Jakarta Selatan, DKI Jakarta
-        </p>
-        <p style="margin-top: 8px;">
-          <a href="https://www.google.com/maps/search/?api=1&query=Jl.+Buah+Segar+No.+12+Jakarta+Selatan" 
-             target="_blank" rel="noopener" style="color: #fff; text-decoration: underline;">
-            Lihat di Google Maps
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <section>
+      <h2>🍹 Jus Buah Segar</h2>
+      <p>
+        Jus buah segar pilihan untuk menemani aktivitas, waktu santai,
+        dan momen berbagi bersama orang tersayang.
+      </p>
+    </section>
+
+    <section>
+      <h2>Menu Cepat</h2>
+      <ul class="footer-links">
+        <li>
+          <a href="{{ '/menu' | relative_url }}">Daftar Menu</a>
+        </li>
+        <li>
+          <a href="{{ '/pesan' | relative_url }}">Pesan via WhatsApp</a>
+        </li>
+        <li>
+          <a href="{{ '/gift' | relative_url }}">Kirim Gift</a>
+        </li>
+        <li>
+          <a href="{{ '/galeri' | relative_url }}">Galeri Produk</a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="kontak">
+      <h2>Kontak & Lokasi</h2>
+      <p>
+        WhatsApp:
+        <a
+          href="https://wa.me/6281234567890"
+          target="_blank"
+          rel="noopener"
+        >
+          0812-3456-7890
+        </a>
+      </p>
+
+      <p>
+        Jl. Buah Segar No. 12<br>
+        Jakarta Selatan
+      </p>
+
+      <p>
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=Jl.+Buah+Segar+No.+12+Jakarta+Selatan"
+          target="_blank"
+          rel="noopener"
+        >
+          Buka lokasi di Google Maps
+        </a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Pesan Online</h2>
+      <ul class="footer-links">
+        <li>
+          <a href="https://gofood.co.id" target="_blank" rel="noopener">
+            GoFood
           </a>
-        </p>
-      </div>
-
-      <div>
-        <h3>📞 Kontak</h3>
-        <p>
-          WhatsApp: 0812-3456-7890<br />
-          Email: halo@jusbuah.github.io
-        </p>
-      </div>
-
-      <div>
-        <h3>🛒 Pesan Online</h3>
-        <p>
-          <a href="https://gofood.co.id" target="_blank" rel="noopener">GoFood</a><br />
-          <a href="https://shopeefood.co.id" target="_blank" rel="noopener">ShopeeFood</a><br />
-          <a href="https://grab.com" target="_blank" rel="noopener">GrabFood</a>
-        </p>
-        <p style="margin-top: 8px;">
-          <a href="{{ '/pesan' | relative_url }}" style="color: #fff; text-decoration: underline;">
-            Form Pesan via WhatsApp
+        </li>
+        <li>
+          <a href="https://shopeefood.co.id" target="_blank" rel="noopener">
+            ShopeeFood
           </a>
-        </p>
-      </div>
-
-      <div>
-        <h3>📸 Galeri</h3>
-        <p>
-          <a href="{{ '/galeri' | relative_url }}" style="color: #fff; text-decoration: underline;">
-            Lihat Foto Produk
+        </li>
+        <li>
+          <a href="https://www.grab.com/id/food/" target="_blank" rel="noopener">
+            GrabFood
           </a>
-        </p>
-      </div>
-    </div>
+        </li>
+      </ul>
+    </section>
+  </div>
 
-    <p class="copyright">
-      &copy; {{ site.time | date: '%Y' }} {{ site.title }}. Dibuat dengan Jekyll & GitHub Pages.
+  <div class="container footer-bottom">
+    <p>
+      &copy; {{ site.time | date: "%Y" }} {{ site.title }}.
+      Dibuat dengan GitHub Pages.
     </p>
   </div>
 </footer>
