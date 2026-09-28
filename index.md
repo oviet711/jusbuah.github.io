@@ -98,7 +98,16 @@ title: Beranda
 <section class="section">
   <h2>🎁 Gift & Pesan Online</h2>
 
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px;">
+  <div class="info-grid">
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    gap: 22px;
+  }
+  
+  .info-grid > div {
+    min-width: 0;
+  }
     <div>
       <h3 style="color: var(--primary); margin-bottom: 10px;">Kirim Jus sebagai Gift</h3>
       <p style="margin-bottom: 12px;">
